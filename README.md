@@ -38,6 +38,7 @@ project-root/
 │   └── ...
 └── ...
 ```
+Example output CSV file: [example.csv](https://github.com/hamdyekiz/Missile-DATCOM-Parser/blob/main/alpha0.00.csv)
 
 ---
 
