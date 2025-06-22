@@ -12,10 +12,12 @@ This Python script automates the process of running [Missile DATCOM](https://en.
   - **Mach number**: customizable range and step
   - **Angle of attack (ALPHA)**: customizable range and step
   - **Center of gravity (XCG)**: customizable range and step
+  - **Deflewction angle (DELTA)**: customizable range and step
+
 - Automatically modifies `for005.dat` for each test case
 - Executes `datcom97.exe` via subprocess
 - Parses aerodynamic and stability coefficients from `for006.dat`
-- Exports results into neatly structured CSV files per `XCG` and `ALPHA`
+- Exports results into neatly structured CSV files per `XCG`, `ALPHA` and `DELTA`
 
 ---
 
@@ -88,3 +90,8 @@ xcg_min = 2.10
 xcg_max = 2.40
 xcg_total_step_size = math.ceil((xcg_max - xcg_min) / xcg_step_size) + 2
 xcg_values = [xcg_step_size * (i - 1) + xcg_min for i in range(1, xcg_total_step_size)]
+
+# Deflection Angle (delta) settings
+delta_min  = -25.0    
+delta_max  = 20.0  
+delta_step = 1
